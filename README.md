@@ -15,13 +15,13 @@ GulpJS is used for SCSS compiling and JS minifying, and a .gulpfile for this is 
 The template also comes with jQuery and an empty JS file included.
 
 
-**Setting up the project**
+### Setting up the project ###
 - Download/fork the repo, navigate to it, and run *npm install* in the terminal  
 (make sure you have node installed first)
 
 - Create a file called *.env* which contains the following two lines, and add your info from Contentful:
- - CONTENTFUL_API_KEY='your_key_here'
- - CONTENTFUL_SPACE_ID='your_space_id_here'
+  - CONTENTFUL_API_KEY='your_key_here'
+  - CONTENTFUL_SPACE_ID='your_space_id_here'
 
 - To start the server, run *npm start* in the terminal. Navigate to http://localhost:7000/ and everything should be working 🙏 
 
