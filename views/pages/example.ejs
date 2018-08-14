@@ -1,0 +1,10 @@
+
+Example site.
+<br>
+Here are the entries:
+
+<% entries.forEach(function(entry){ %>
+    <h1><%- entry.fields.title %></h1>
+    <p><%- entry.fields.description %></p>
+    <img src="<%- entry.fields.photo.fields.file.url %>" alt="" width="400px">
+<% }); %>
