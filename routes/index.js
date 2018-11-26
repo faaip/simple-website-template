@@ -1,5 +1,5 @@
-var express = require('express');
-var router = express.Router();
+let express = require('express');
+let router = express.Router();
 
 // http://localhost:7000/
 router.get('/', function(req, res, next) {
