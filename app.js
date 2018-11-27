@@ -18,29 +18,34 @@ app.set('view engine', 'ejs');
 
 
 var index = require('./routes/index.js');
-var example = require('./routes/example.js');
 
 app.use('/', index);
-app.use('/example', example);
 
 // Handle unhandled routes
-app.use(function(req, res, next) {
-    next({status: 404,message: 'Not Found'});
+app.use(function (req, res, next) {
+    next({
+        status: 404,
+        message: 'Not Found'
+    });
 });
 
 // General error handling
 app.use(function (err, req, res, next) {
     console.log(err.status);
-    if(!err.message && err.statusText) {
+    if (!err.message && err.statusText) {
         err.message = err.statusText;
     }
-	if (err.status == 404) {
-		res.status(404).render('error', {error: err});
-	} else {
-		res.status(500).render('error', {error: err});
-	}
+    if (err.status == 404) {
+        res.status(404).render('error', {
+            error: err
+        });
+    } else {
+        res.status(500).render('error', {
+            error: err
+        });
+    }
 });
 
-app.listen(app.get('port'), function() {
-  console.log('Node app is running on port', app.get('port'));
+app.listen(app.get('port'), function () {
+    console.log('Node app is running on port', app.get('port'));
 });
